@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <title>Home page</title>
+</head>
+<body>
+    <p>Пользователи</p>
+	<ul>
+	{{ range . }}
+    <li>Name: {{ .Name }}; Age: {{ .Age }}; <a href="/user?id={{.Id}}">подробнее</a></li>
+	{{ end }}
+	</ul>
+</body>
+</html>
